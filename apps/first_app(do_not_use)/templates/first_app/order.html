@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Orders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">log off</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navigation -->
+    <!-- Test -->
+
+    <!-- End Test -->
+    <!-- Customer Info -->
+    <div style="margin-left: 5%; margin-top: 5%; height: auto; width: 20%; border: solid black 3px; display: inline-block;">
+        <p>Order ID: </p>
+        <p>Customer shipping info: </p>
+        <p>name: </p>
+        <p>address: </p>
+        <p>city: </p>
+        <p>state: </p>
+        <p>zip: </p>
+        <p>Customer billing info: </p>
+        <p>name: </p>
+        <p>address: </p>
+        <p>city: </p>
+        <p>state: </p>
+        <p>zip: </p>
+    </div>
+    <!-- End Customer Info -->
+    <!-- Order Table -->
+    <table class="table table-striped" style='vertical-align: top; margin-left: 10%; margin-top: 5%; width:45%; display: inline-block;'>
+        <thead>
+            <tr class="list-group-item-dark">
+                <th scope="col">Order ID</th>
+                <th scope="col">Item</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for show in shows %}
+            <tr>
+                <td>{{ show.id }}</a></td>
+                <td>{{ show.item }}</td>	
+                <td>{{ show.price }}</td>
+                <td>{{ show.quantity }}</td>
+                <td><{{ show.total }}></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <!-- End Order Table -->
+    <p style="border: solid black 3px; width:10%; display: inline-block; margin-left: -50%; vertical-align: top; margin-top: 15%"> Status: (insert status here)</p>
+    <div style="border: solid black 3px; width:20%; display: inline-block; vertical-align: top; margin-top: 15%; margin-left: 10%;">
+        <p>Subtotal: </p>
+        <p>Shipping: </p>
+        <p>Total Price:</p>
+    </div>
+    <!-- Footer -->
+    <footer class="py-3 bg-primary">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+      </div>
+    <!-- /.container -->
+    </footer>
+  </body>
+</html>

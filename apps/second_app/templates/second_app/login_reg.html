@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Dojo Jerseys</title>
+
+    <!-- Favicon  -->
+    {% load static %}
+    <link rel="icon" href="{% static 'second_app/images/core-img/favicon.ico' %}">
+
+    <!-- Core Style CSS -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'second_app/css/core-style.css' %}">
+    <link rel="stylesheet" href="{% static 'second_app/css/style.css' %}">
+    <style>
+        .footer_widget{
+            width: 50px;
+            height: auto;
+        }
+        .google-map{
+            margin-left: 100px;
+            text-align: right;
+            width: 700px;
+        }
+        .login{
+            text-align: right;
+            margin-right: 10%;
+        }
+        .registration{
+            width: 500px;
+            margin-left: 5%;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            text-align: right;
+            margin-right: 20%;
+        }
+        .messages{
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- Logo -->
+                <a class="nav-brand" href="/"><img src="{% static 'second_app/images/core-img/logo.png' %}" alt=""></a>
+                <!-- Navbar Toggler -->
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+                <!-- Menu -->
+                <div class="classy-menu">
+                    <!-- close btn -->
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+                    <!-- Nav Start -->
+                    <div class="classynav">
+                        <ul>
+                            <li><a href="/">Shop</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Nav End -->
+                </div>
+            </nav>
+
+            <!-- Header Meta Data -->
+            <div class="header-meta d-flex clearfix justify-content-end">
+                <!-- Search Area -->
+                <div class="search-area">
+                    <form action="#" method="post">
+                        <input type="search" name="search" id="headerSearch" placeholder="Type for search">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                <!-- Favourite Area -->
+                <div class="favourite-area">
+                    <a href="#"><img src="{% static 'second_app/images/core-img/heart.svg' %}" alt=""></a>
+                </div>
+                <!-- User Login Info -->
+                <div class="user-login-info">
+                    <a href="#"><img src="{% static 'second_app/images/core-img/user.svg' %}" alt=""></a>
+                </div>
+                <!-- Cart Area -->
+                <div class="cart-area">
+                    <a href="#" id="essenceCartBtn"><img src="{% static 'second_app/images/core-img/bag.svg' %}" alt=""> <span>1</span></a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+
+
+    <div class="contact-area d-flex align-items-center">
+            <div class="registration">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            <form action="/userreg" method=POST class="registration">
+                {% csrf_token %}
+                <h2>Registration</h2>
+                <p>First Name <input type="text" name="fname"></p>
+                <p>Last Name <input type="text" name="lname"></p>
+                <p>Email <input type="text" name="email"></p>
+                <p>Password <input type="password" name="password"></p>
+                <p>Confirm PW <input type="password" name="conf_password"></p>
+                <input type ="submit" value="Register">
+            </form>
+            </div>
+
+            <div class="login">
+                    <h2> Login</h2>
+                    <form action="/userlog" method=POST>
+                        {% csrf_token %}
+                        <p>Email <input type="text" name="email"></p>
+                        <p>Password <input type="password" name="password"></p>
+                        <input type ="submit" value="Log In">
+                    </form>
+            </div>
+
+    </div>
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer_area clearfix">
+        <div class="container">
+            <div class="row">
+                <!-- Single Widget Area -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area d-flex mb-30">
+                        <!-- Logo -->
+                        <div class="footer-logo mr-50">
+                            <a href="#"><img src="{% static 'second_app/images/core-img/logo2.png' %}" alt=""></a>
+                        </div>
+                        <!-- Footer Menu -->
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="/shop">Shop</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Widget Area -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area mb-30">
+                        <ul class="footer_widget_menu">
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                            <li><a href="#">Shipping and Delivery</a></li>
+                            <li><a href="#">Guides</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-end">
+                <!-- Single Widget Area -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area">
+                        <div class="footer_heading mb-30">
+                            <h6>Subscribe</h6>
+                        </div>
+                        <div class="subscribtion_form">
+                            <form action="#" method="post">
+                                <input type="email" name="mail" class="mail" placeholder="Your email here">
+                                <button type="submit" class="submit"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Widget Area -->
+                <div class="col-12 col-md-6">
+                        <div class="single_widget_area">
+                            <div class="footer_social_area">
+                                <a class="footer_widget" href="/facebook.com"><img src="{% static 'second_app/images/bg-img/widget_fb.png' %}" alt=""></a>
+                                <a class="footer_widget" href="/instagram.com"><img src="{% static 'second_app/images/bg-img/widget_ig.png' %}" alt=""></a>
+                                <a class="footer_widget" href="/twitter.com"><img src="{% static 'second_app/images/bg-img/widget_tt.png' %}" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+<div class="row mt-5">
+                <div class="col-md-12 text-center">
+                        <p style='color: #252525;'>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" style='color: #252525;'>Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="{% static 'second_app/js/jquery/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'second_app/js/popper.min.js' %}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'second_app/js/bootstrap.min.js' %}"></script>
+    <!-- Plugins js -->
+    <script src="{% static 'second_app/js/plugins.js' %}"></script>
+    <!-- Classy Nav js -->
+    <script src="{% static 'second_app/js/classy-nav.min.js' %}"></script>
+    <!-- Active js -->
+    <script src="{% static 'second_app/js/active.js' %}"></script>
+    <!-- Google Maps -->
+    <script src="{% static 'second_app/js/google.js' %}"></script>
+    <script src="{% static 'second_app/js/map-active.js' %}"></script>
+
+</body>
+
+</html>

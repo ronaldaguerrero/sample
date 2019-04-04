@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Dojo Jerseys</title>
+
+    <!-- Favicon  -->
+    {% load static %}
+    <link rel="icon" href="{% static 'second_app/images/core-img/favicon.ico' %}">
+
+    <!-- Core Style CSS -->
+    <link rel="stylesheet" href="{% static 'second_app/css/style.css' %}"> 
+    <link rel="stylesheet" href="{% static 'second_app/css/core-style.css' %}"> 
+    <!-- <link rel="stylesheet" href="css/core-style.css"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .footer_widget{
+            width: 50px;
+            height: auto;
+        }
+    </style>
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="{% static 'second_app/js/popper.min.js' %}"></script>
+    <script src="{% static 'second_app/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'second_app/js/plugins.js' %}"></script>
+    <script src="{% static 'second_app/js/classy-nav.min.js' %}"></script>
+    <script src="{% static 'second_app/js/scractiveipt.js' %}"></script>
+    <script src="{% static 'second_app/js/jquery/jquery-2.2.4.min.js' %}"></script>
+
+</head>
+
+<body>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header_area">
+        <div class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
+            <!-- Classy Menu -->
+            <nav class="classy-navbar" id="essenceNav">
+                <!-- Logo -->
+                <a class="nav-brand" href="/"><img src="{% static 'second_app/images/core-img/logo.png' %}" alt=""></a>
+                <!-- Navbar Toggler -->
+                <div class="classy-navbar-toggler">
+                    <span class="navbarToggler"><span></span><span></span><span></span></span>
+                </div>
+                <!-- Menu -->
+                <div class="classy-menu">
+                    <!-- close btn -->
+                    <div class="classycloseIcon">
+                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                    </div>
+                    <!-- Nav Start -->
+                    <div class="classynav">
+                        <ul>
+                            <li><a href="/shop">Shop</a>
+                                <div class="megamenu">
+                                    <div class="single-mega cn-col-4">
+                                        <img src="{% static 'second_app/images/bg-img/bg-6.jpg' %}" alt="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- Nav End -->
+                </div>
+            </nav>
+
+            <!-- Header Meta Data -->
+            <div class="header-meta d-flex clearfix justify-content-end">
+                <!-- Search Area -->
+                <div class="search-area">
+                    <form action="#" method="post">
+                        <input type="search" name="search" id="headerSearch" placeholder="Type for search">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+                <!-- Favourite Area -->
+                <div class="favourite-area">
+                    <a href="#"><img src="{% static 'second_app/images/core-img/heart.svg' %}" alt=""></a>
+                </div>
+                <!-- User Login Info -->
+                <div class="user-login-info">
+                    <a href="#"><img src="{% static 'second_app/images/core-img/user.svg' %}" alt=""></a>
+                </div>
+                <!-- Cart Area -->
+                <div class="cart-area">
+                    <a href="cart" id="essenceCartBtn"><img src="{% static 'second_app/images/core-img/bag.svg' %}" alt=""> <span>0</span></a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <div class="breadcumb_area breadcumb-style-two bg-img" style="background-image: url({% static 'second_app/images/bg-img/breadcrumb3.jpg' %});">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="page-title text-center">
+                        <h2>Sports Blog</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcumb Area End ##### -->
+
+    <!-- ##### Blog Wrapper Area Start ##### -->
+    <div class="blog-wrapper section-padding-80">
+        <div class="container">
+            <div class="row">
+               
+                <!-- Single Blog Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-blog-area mb-50">
+                        <img src="{% static 'second_app/images/bg-img/blog1.jpg' %}" alt="">
+                        <!-- Post Title -->
+                        <div class="post-title">
+                            <a href="#">The Dallas Mavericks have agreed to a deal for New York Knicks star Kristaps Porzingis</a>
+                        </div>
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                            <!-- Post Title -->
+                            <div class="hover-post-title">
+                                <a href="#">The Dallas Mavericks have agreed to a deal for New York Knicks star Kristaps Porzingis.</a>
+                            </div>
+                            <p>New York has agreed with Dallas on trade that includes Kristaps Porzingis, Courtney Lee, Tim Hardaway Jr., for Wesley Matthews, Dennis Smith Jr. and DeAndre Jordan, league sources tell ESPN.</p>
+                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+               <!-- Single Blog Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-blog-area mb-50">
+                        <img src="{% static 'second_app/images/bg-img/blog4.jpg' %}" alt="">
+                        <!-- Post Title -->
+                        <div class="post-title">
+                            <a href="#">Super Bowl 2019: Everything you need to know</a>
+                        </div>
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                            <!-- Post Title -->
+                            <div class="hover-post-title">
+                                <a href="#">Super Bowl 2019: Everything you need to know.</a>
+                            </div>
+                            <p>It's the Rams first Super Bowl appearance since 2002, when they lost to the Patriots. New England has been back eight times since.</p>
+                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-blog-area mb-50">
+                        <img src="{% static 'second_app/images/bg-img/blog2.jpg' %}" alt="">
+                        <!-- Post Title -->
+                        <div class="post-title">
+                            <a href="#">Pelicans, Lakers executives talk on phone about Davis</a>
+                        </div>
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                            <!-- Post Title -->
+                            <div class="hover-post-title">
+                                <a href="#">Pelicans, Lakers executives talk on phone about Davis</a>
+                            </div>
+                            <p>Lakers and Pelicans executives have connected on the phone concerning Anthony Davis, league sources tell ESPN. They're expected to talk again prior to next week's trade deadline.</p>
+                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+               
+                <!-- Single Blog Area -->
+                <div class="col-12 col-lg-6">
+                    <div class="single-blog-area mb-50">
+                        <img src="{% static 'second_app/images/bg-img/blog3.jpg' %}" alt="">
+                        <!-- Post Title -->
+                        <div class="post-title">
+                            <a href="#">Judge rejects replay of NFL's Saints-Rams game after bad call</a>
+                        </div>
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                            <!-- Post Title -->
+                            <div class="hover-post-title">
+                                <a href="#">Judge rejects replay of NFL's Saints-Rams game after bad call</a>
+                            </div>
+                            <p>A federal judge on Thursday refused to order the NFL to consider replaying the conference title game where the L.A. Rams defeated the N.O. Saints and gained entry to the Super Bowl after a critical missed call by officials.</p>
+                            <a href="#">Continue reading <i class="fa fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Blog Wrapper Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer_area clearfix">
+        <div class="container">
+            <div class="row">
+                <!-- Single Widget Area -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area d-flex mb-30">
+                        <!-- Logo -->
+                        <div class="footer-logo mr-50">
+                            <a href="#"><img src="img/core-img/logo2.png" alt=""></a>
+                        </div>
+                        <!-- Footer Menu -->
+                        <div class="footer_menu">
+                            <ul>
+                                <li><a href="/">Shop</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Widget Area -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area mb-30">
+                        <ul class="footer_widget_menu">
+                            <li><a href="#">Order Status</a></li>
+                            <li><a href="#">Payment Options</a></li>
+                            <li><a href="#">Shipping and Delivery</a></li>
+                            <li><a href="#">Guides</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-end">
+                <!-- Single Widget Area -->
+                <div class="col-12 col-md-6">
+                    <div class="single_widget_area">
+                        <div class="footer_heading mb-30">
+                            <h6>Subscribe</h6>
+                        </div>
+                        <div class="subscribtion_form">
+                            <form action="#" method="post">
+                                <input type="email" name="mail" class="mail" placeholder="Your email here">
+                                <button type="submit" class="submit"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Widget Area -->
+                <div class="col-12 col-md-6">
+                        <div class="single_widget_area">
+                            <div class="footer_social_area">
+                                <a class="footer_widget" href="/facebook.com"><img src="{% static 'second_app/images/bg-img/widget_fb.png' %}" alt=""></a>
+                                <a class="footer_widget" href="/instagram.com"><img src="{% static 'second_app/images/bg-img/widget_ig.png' %}" alt=""></a>
+                                <a class="footer_widget" href="/twitter.com"><img src="{% static 'second_app/images/bg-img/widget_tt.png' %}" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-12 text-center">
+                        <p style='color: #252525;'>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" style='color: #252525;'>Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Classy Nav js -->
+    <script src="js/classy-nav.min.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>
